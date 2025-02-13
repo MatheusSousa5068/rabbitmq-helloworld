@@ -26,7 +26,10 @@ public class Receptor {
             System.out.println("Mensagem: " + mensagem);
         };
 
+
         canal.basicConsume(fila, true, callback, consumerTag -> {});
+        
+        System.out.println("Continuarei executando outras atividades enquanto não chega mensagem...");
 
     }
 }
